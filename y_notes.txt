@@ -1,0 +1,65 @@
+
+//notes for personal use: 
+//src The src attribute stores the full path of the image file, 
+//not just a state like 'done' or 'undone'. usually 'data-state'
+//Or just 'classList' can be used for tracking state
+//samples below
+
+//y in notes.txt file name so it comes after thankyou.html file alphabatically
+
+//classList from textbook/191
+
+Easy toggle :
+function toggleActionButton() {
+  if (itemCount === totalItems) {
+    actionBtn.textContent = 'Order Now';
+    actionBtn.removeAttribute('disabled');
+  } else if (itemCount > 0) {
+    actionBtn.textContent = 'Reset';
+    actionBtn.removeAttribute('disabled');
+  } else {
+    actionBtn.textContent = 'Reset';
+    actionBtn.setAttribute('disabled', '');
+  }
+}
+
+// Using 'data-status' attribute to track the button's state.
+function checkItem(idx) {
+  if (pizzaButtons[idx].getAttribute('data-status') === 'done') {
+    if (itemCount > 0) itemCount--;
+    pizzaButtons[idx].setAttribute('data-status', 'undone');
+    pizzaButtons[idx].classList.remove('done');
+  } else {
+    itemCount++;
+    pizzaButtons[idx].setAttribute('data-status', 'done');
+    pizzaButtons[idx].classList.add('done');
+  }
+
+  updateInfoText();
+  toggleActionButton();
+}
+
+//if 'type' is declared in js instead of html:
+for (let i = 0; i < pizzaButtons.length; i++) {
+  pizzaButtons[i].addEventListener('click', function () {
+    checkItem(this.value);
+    refreshItemCount();
+    toggleActionButton();
+  });
+  pizzaButtons[i].setAttribute('type', 'button');
+}
+
+// Using 'classList' to track the button's state"
+function checkItem(idx) {
+  if (pizzaButtons[idx].classList.contains('done')) {
+    if (itemCount > 0) itemCount--;
+    pizzaButtons[idx].classList.remove('done');
+  } else {
+    itemCount++;
+    pizzaButtons[idx].classList.add('done');
+  }
+
+  updateInfoText();
+  toggleActionButton();
+}
+

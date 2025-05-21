@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="scripts/app.js" defer></script>
+  <link rel="stylesheet" href="css/app.css">
+  <title>Pizza Toppings Selection</title>
+</head>
+<body>
+  <main>
+    <h1>Choose Your Favorite Toppings</h1>
+    <h2 id="info">0 of 8 items selected!</h2>
+    <div id="pizzaDiv">
+      <button type="button" value="0"><img src="assets/images/tomatoes.png" alt="Tomatoes"></button>
+      <button type="button" value="1"><img src="assets/images/cheese.png" alt="Cheese"></button>
+      <button type="button" value="2"><img src="assets/images/onionstopping.png" alt="Onions"></button>
+      <button type="button" value="3"><img src="assets/images/olives.jpg" alt="Olives"></button>
+      <button type="button" value="4"><img src="assets/images/mushrooms.png" alt="Mushrooms"></button>
+      <button type="button" value="5"><img src="assets/images/beefpepperoni.png" alt="Beef Pepperoni"></button>
+      <button type="button" value="6"><img src="assets/images/spinachmix.png" alt="Spinach Mix"></button>
+      <button type="button" value="7"><img src="assets/images/bellpeppers.jpg" alt="Bell Peppers"></button>
+    </div>
+    <button type="button" id="actionBtn" onclick="handleAction();" disabled>Reset</button>
+  </main>
+</body>
+</html>

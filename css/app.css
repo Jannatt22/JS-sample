@@ -1,0 +1,144 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body {
+  background: linear-gradient(to top, #060606c7, #040404b1), url('../assets/images/bkg.png') no-repeat center center;
+  background-size: cover;
+  font-size: 1.6em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+main {
+  width: 80%;
+  min-height: 750px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 16px;
+  margin: 50px 50px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 2px 3px 4px #333;
+}
+main > h1 {
+  margin-bottom: 5px;
+  color: #010101;
+  font-size: 1.8em;
+  font-weight: bold;
+  margin-top: 40px;
+}
+main > h2 {
+  padding-top: 10px;
+  color: #333;
+  font-size: 1em;
+  font-weight: bold;
+}
+#pizzaDiv {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 35px;
+  margin-bottom: 45px;
+}
+#pizzaDiv > button {
+  width: calc(22% - 10px);
+  height: 180px;
+  cursor: pointer;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+  background: transparent;
+  box-shadow: 2px 2px 4px #222;
+}
+#pizzaDiv > button img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#pizzaDiv > button.done::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-48%, -50%);
+  width: 200px;
+  height: 200px;
+  background: url('../assets/images/checkmark.png') no-repeat center center;
+  background-size: contain;
+  z-index: 2;
+}
+#pizzaDiv > button.done::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.368);
+  z-index: 1;
+  border-radius: 2px;
+}
+#actionBtn {
+  width: 30%;
+  margin: 35px auto;
+  font-size: 1.5em;
+  font-weight: 555;
+  margin-bottom: 65px;
+  cursor: pointer;
+  border-radius: 10px;
+  color: #ffffff;
+  background: #3ddb45;
+  box-shadow: 2px 2px 4px #222;
+  padding: 5px;
+  border: none;
+}
+#actionBtn:hover {
+  background:#01480e;
+}
+#thankYouMain {
+  position: relative;
+  width: 70%;
+  min-height: 700px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 16px;
+  margin: 50px auto;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 2px 3px 4px #333;
+}
+#goBackBtn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 1.5em;
+  text-decoration: none;
+  cursor: pointer;
+}
+#thankYouMain > h1 {
+  margin-bottom: 5px;
+  padding-right: 5px;
+  color: #000000;
+  font-size: 1.5em;
+  margin-top: 65px;
+}
+#thankYouMain > p {
+  padding-top: 10px;
+  padding-right: 5px;
+  color: #842d2d;
+  font-size: 1em;
+  margin-bottom: 10px;
+}
+#thankYouImage {
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  margin-top: 40px;
+  padding-right: 5px;
+  margin-bottom: 100px;
+}
+
